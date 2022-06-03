@@ -1,0 +1,346 @@
+﻿<Window x:Class="Hospital.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital"
+        mc:Ignorable="d"
+        Title="Manager" Height="694" Width="1296">
+    <Grid>
+        <Image Margin="0,4,0,0" Source="/Untitled Design 7.png" Stretch="Fill"/>
+        <Label Content="Welcome " HorizontalAlignment="Left" Height="36" Margin="98,58,0,0" VerticalAlignment="Top" Width="120" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="staff_name" HorizontalAlignment="Left" Height="32" Margin="234,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="log_out" Content="LOG OUT" HorizontalAlignment="Right" Height="44" Margin="0,53,106,0" VerticalAlignment="Top" Width="149" FontSize="20" FontWeight="Bold" Background="#FFC92E20" Foreground="White"/>
+        <TabControl x:Name="manager_tabcontrol" Margin="62,126,54,28" FontSize="20" FontWeight="Bold">
+            <TabItem x:Name="pateint_page" Header="Patient" Margin="-2,-2,-27,0">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="view_all_patient" Content="View all&#xA; hospital &#xA;patients" HorizontalAlignment="Left" Height="112" Margin="107,107,0,0" VerticalAlignment="Top" Width="178" Background="#FF9BBB1D" Foreground="White"/>
+                    <Button x:Name="view_patient_in_department" Content="View patients in&#xA; department" HorizontalAlignment="Left" Height="102" Margin="470,108,0,0" VerticalAlignment="Top" Width="181" Background="#FF3D4C5F" Foreground="White"/>
+                    <Button x:Name="view_patient_at_doctor" Content="View patients&#xA; at a particular&#xA; doctor" HorizontalAlignment="Left" Height="108" Margin="813,107,0,0" VerticalAlignment="Top" Width="187" Foreground="White" Background="#FF2EABA7"/>
+                    <Button x:Name="delete_patient" Content="Delete" HorizontalAlignment="Left" Height="68" Margin="819,319,0,0" VerticalAlignment="Top" Width="175" Background="#FFFA593D" Foreground="White"/>
+                    <Label Content="Enter the National ID" HorizontalAlignment="Left" Height="33" Margin="54,302,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="patient_nattional_id" HorizontalAlignment="Left" Height="39" Margin="38,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="442,301,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="patient_name" HorizontalAlignment="Left" Height="41" Margin="434,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Delete Pateint&#xA;" HorizontalAlignment="Left" Height="43" Margin="33,245,0,0" VerticalAlignment="Top" Width="283" Foreground="#FFC92E20" FontSize="24"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Doctors_page" Header="Doctors" Margin="26,-2,-42,0">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="view_all_doctor" Content="View all&#xA; hospital &#xA;Doctors" HorizontalAlignment="Left" Height="112" Margin="953,34,0,0" VerticalAlignment="Top" Width="178" Background="#FF9BBB1D" Foreground="White"/>
+                    <Button x:Name="view_doctors_in_department" Content="View Doctors in&#xA; department" HorizontalAlignment="Left" Height="102" Margin="954,187,0,0" VerticalAlignment="Top" Width="181" Background="#FF3D4C5F" Foreground="White"/>
+                    <Label Content="Doctor's data modification" HorizontalAlignment="Left" Height="46" Margin="14,13,0,0" VerticalAlignment="Top" Width="315" Foreground="#FFFA583F" FontSize="24"/>
+                    <Label Content="Enter the National ID" HorizontalAlignment="Left" Height="33" Margin="36,65,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="doctor_national_ID" HorizontalAlignment="Left" Margin="29,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="44,135,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="doctor_name" HorizontalAlignment="Left" Height="29" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Gender :" HorizontalAlignment="Left" Margin="50,206,0,0" VerticalAlignment="Top" Height="36" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <ComboBox x:Name="doctor_Gender" HorizontalAlignment="Left" Margin="44,246,0,0" VerticalAlignment="Top" Width="111" Height="28" FontWeight="Bold" FontSize="18">
+                        <ComboBoxItem Content="Male"/>
+                        <ComboBoxItem Content="Female"/>
+                    </ComboBox>
+                    <Label Content="Birth Date :" HorizontalAlignment="Left" Margin="190,207,0,0" VerticalAlignment="Top" Height="33" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="doctor_birth_date" HorizontalAlignment="Left" Margin="184,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="E-mail :" HorizontalAlignment="Left" Height="35" Margin="37,291,0,0" VerticalAlignment="Top" Width="296" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="doctor_E_mail" HorizontalAlignment="Left" Height="29" Margin="32,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Address :&#xA;" HorizontalAlignment="Left" Height="34" Margin="35,364,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="doctor_address" HorizontalAlignment="Left" Height="49" Margin="30,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Phone number :" HorizontalAlignment="Left" Height="35" Margin="426,65,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="doctor_phone" HorizontalAlignment="Left" Height="29" Margin="399,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Specialization :" HorizontalAlignment="Left" Height="36" Margin="420,135,0,0" VerticalAlignment="Top" Width="287" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="doctor_specialization" HorizontalAlignment="Left" Height="29" Margin="401,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="doctor_cv_update" Content="Upload the CV file" HorizontalAlignment="Right" Height="45" Margin="0,0,490,107" VerticalAlignment="Bottom" Width="196" Background="#FF57CFE4" FontSize="20" FontWeight="Bold"/>
+                    <Label Content="LabelUpload the revised CV of the doctor" Margin="0,0,375,176" HorizontalAlignment="Right" Width="397" Height="37" VerticalAlignment="Bottom"/>
+                    <Button x:Name="doctor_submit" Content="Submit" HorizontalAlignment="Center" Margin="0,0,0,26" Width="178" Background="#FFFA583F" Foreground="White" FontSize="24" Height="65" VerticalAlignment="Bottom"/>
+                    <Label Content="Salary:" HorizontalAlignment="Left" Height="37" Margin="411,216,0,0" VerticalAlignment="Top" Width="111" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="doctor_salary" HorizontalAlignment="Left" Height="29" Margin="518,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="nurses_page" Header="Nurses" Margin="38,-2,-57,0" Height="33" VerticalAlignment="Top">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Nurse's data modification" HorizontalAlignment="Left" Height="46" Margin="14,13,0,0" VerticalAlignment="Top" Width="315" Foreground="#FFFA583F" FontSize="24"/>
+                    <Label Content="Enter the National ID" HorizontalAlignment="Left" Height="33" Margin="36,65,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="nurse_national_id" HorizontalAlignment="Left" Margin="29,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="44,135,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="nurse_name" HorizontalAlignment="Left" Height="29" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Gender :" HorizontalAlignment="Left" Margin="50,206,0,0" VerticalAlignment="Top" Height="36" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <ComboBox x:Name="nurse_gender" HorizontalAlignment="Left" Margin="44,246,0,0" VerticalAlignment="Top" Width="111" Height="28" FontWeight="Bold" FontSize="18">
+                        <ComboBoxItem Content="Male"/>
+                        <ComboBoxItem Content="Female"/>
+                    </ComboBox>
+                    <Label Content="Birth Date :" HorizontalAlignment="Left" Margin="190,207,0,0" VerticalAlignment="Top" Height="33" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="nurse_birth_date" HorizontalAlignment="Left" Margin="184,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="E-mail :" HorizontalAlignment="Left" Height="35" Margin="37,291,0,0" VerticalAlignment="Top" Width="296" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="nurse_E_mail" HorizontalAlignment="Left" Height="29" Margin="32,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Address :&#xA;" HorizontalAlignment="Left" Height="34" Margin="35,364,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="nurse_address" HorizontalAlignment="Left" Height="49" Margin="30,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Phone number :" HorizontalAlignment="Left" Height="35" Margin="420,39,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <Label Content="Specialization :" HorizontalAlignment="Left" Height="36" Margin="419,103,0,0" VerticalAlignment="Top" Width="287" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="nurse_phone" HorizontalAlignment="Left" Height="29" Margin="404,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" FontSize="18" FontWeight="Bold"/>
+                    <TextBox x:Name="nurse_specialization" HorizontalAlignment="Left" Height="29" Margin="402,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Salary:" HorizontalAlignment="Left" Height="37" Margin="425,181,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="nurse_salary" HorizontalAlignment="Left" Height="29" Margin="552,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="LabelUpload the revised&#xA; CV of the Nurse" HorizontalAlignment="Right" Margin="0,0,502,26" Width="261" Height="72" VerticalAlignment="Bottom"/>
+                    <Button x:Name="nurse_update_cv" Content="Upload the CV file" HorizontalAlignment="Right" Height="45" Margin="0,0,303,43" VerticalAlignment="Bottom" Width="196" Background="#FF57CFE4" FontSize="20" FontWeight="Bold"/>
+                    <Button x:Name="submit_nurse" Content="Submit" Margin="0,0,37,35" Background="#FFFA583F" Foreground="White" FontSize="24" HorizontalAlignment="Right" Width="178" Height="65" VerticalAlignment="Bottom"/>
+                    <Button x:Name="view_all_nurse" Content="View all&#xA; hospital &#xA;Nurses" HorizontalAlignment="Left" Height="112" Margin="953,34,0,0" VerticalAlignment="Top" Width="178" Background="#FF9BBB1D" Foreground="White"/>
+                    <Button x:Name="view_nurse_in_department" Content="View Nurses in&#xA; department" HorizontalAlignment="Left" Height="102" Margin="954,187,0,0" VerticalAlignment="Top" Width="181" Background="#FF3D4C5F" Foreground="White"/>
+                    <Label Content="with doctor" HorizontalAlignment="Left" Height="35" Margin="403,237,0,0" VerticalAlignment="Top" Width="122"/>
+                    <TextBox x:Name="nurse_with_doctor" HorizontalAlignment="Left" Height="34" Margin="541,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+                    <TextBox x:Name="doctor_national_ID1" HorizontalAlignment="Right" Margin="0,0,449,118" TextWrapping="Wrap" Width="304" FontSize="18" FontWeight="Bold" Height="33" VerticalAlignment="Bottom"/>
+                    <Label Content="Doctor National ID" Margin="424,0,440,154" Height="35" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Pharmacy_page" Header="Pharmacy" Margin="56,-2,-57,0">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="view_all_pharmacit" Content="View all&#xA; hospital &#xA;Pharmacit" HorizontalAlignment="Left" Height="112" Margin="953,34,0,0" VerticalAlignment="Top" Width="178" Background="#FF9BBB1D" Foreground="White"/>
+                    <Label Content="Pharmacit's data modification" HorizontalAlignment="Left" Height="46" Margin="14,13,0,0" VerticalAlignment="Top" Width="357" Foreground="#FFFA583F" FontSize="24"/>
+                    <Label Content="Enter the National ID" HorizontalAlignment="Left" Height="33" Margin="36,65,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+                    <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="44,135,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="pharmacit_id" HorizontalAlignment="Left" Margin="29,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <TextBox x:Name="pharmacit_name" HorizontalAlignment="Left" Height="29" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Gender :" HorizontalAlignment="Left" Margin="50,206,0,0" VerticalAlignment="Top" Height="36" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <ComboBox x:Name="pharmacit_gender" HorizontalAlignment="Left" Margin="44,246,0,0" VerticalAlignment="Top" Width="111" Height="28" FontWeight="Bold" FontSize="18">
+                        <ComboBoxItem Content="Male"/>
+                        <ComboBoxItem Content="Female"/>
+                    </ComboBox>
+                    <Label Content="Birth Date :" HorizontalAlignment="Left" Margin="190,207,0,0" VerticalAlignment="Top" Height="33" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="pharmacit_birth_date" HorizontalAlignment="Left" Margin="184,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="E-mail :" HorizontalAlignment="Left" Height="35" Margin="37,291,0,0" VerticalAlignment="Top" Width="296" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="pharmacit_E_mail" HorizontalAlignment="Left" Height="29" Margin="32,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Address :&#xA;" HorizontalAlignment="Left" Height="34" Margin="35,364,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="pharmacit_address" HorizontalAlignment="Left" Height="49" Margin="30,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Phone number :" HorizontalAlignment="Left" Height="35" Margin="426,65,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="pharmacit_phone" HorizontalAlignment="Left" Height="29" Margin="399,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Salary:" HorizontalAlignment="Left" Height="37" Margin="409,167,0,0" VerticalAlignment="Top" Width="111" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="pharmacit_salary" HorizontalAlignment="Left" Height="29" Margin="516,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="LabelUpload the revised CV of the Nurse" HorizontalAlignment="Left" Margin="424,0,0,193" Width="397" Height="37" VerticalAlignment="Bottom"/>
+                    <Button x:Name="pharmacit_update_cv" Content="Upload the CV file" HorizontalAlignment="Right" Height="45" Margin="0,0,486,131" VerticalAlignment="Bottom" Width="196" Background="#FF57CFE4" FontSize="20" FontWeight="Bold"/>
+                    <Button x:Name="submit_pharmacit" Content="Submit" HorizontalAlignment="Center" Margin="0,0,0,33" Width="178" Background="#FFFA583F" Foreground="White" FontSize="24" Height="65" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="accountants_page" Header="Accountants" Margin="57,-2,-76,0">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="view_all_accountant" Content="View all&#xA; hospital &#xA;Accountants" HorizontalAlignment="Left" Height="112" Margin="953,34,0,0" VerticalAlignment="Top" Width="178" Background="#FF9BBB1D" Foreground="White"/>
+                    <Label Content="Accountant's data modification" HorizontalAlignment="Left" Height="46" Margin="14,13,0,0" VerticalAlignment="Top" Width="385" Foreground="#FFFA583F" FontSize="24"/>
+                    <Label Content="Enter the National ID" HorizontalAlignment="Left" Height="33" Margin="36,65,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="accountant_id" HorizontalAlignment="Left" Margin="29,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="44,135,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="accountant_name" HorizontalAlignment="Left" Height="29" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Gender :" HorizontalAlignment="Left" Margin="50,206,0,0" VerticalAlignment="Top" Height="36" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <ComboBox x:Name="accountant_gender" HorizontalAlignment="Left" Margin="44,246,0,0" VerticalAlignment="Top" Width="111" Height="28" FontWeight="Bold" FontSize="18">
+                        <ComboBoxItem Content="Male"/>
+                        <ComboBoxItem Content="Female"/>
+                    </ComboBox>
+                    <Label Content="Birth Date :" HorizontalAlignment="Left" Margin="190,207,0,0" VerticalAlignment="Top" Height="33" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="accountant_birth_date" HorizontalAlignment="Left" Margin="184,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="E-mail :" HorizontalAlignment="Left" Height="35" Margin="37,291,0,0" VerticalAlignment="Top" Width="296" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="accountant_E_mail" HorizontalAlignment="Left" Height="29" Margin="32,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Address :&#xA;" HorizontalAlignment="Left" Height="34" Margin="35,364,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="accountant_address" HorizontalAlignment="Left" Height="49" Margin="30,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Phone number :" HorizontalAlignment="Left" Height="35" Margin="426,65,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="accountant_phone" HorizontalAlignment="Left" Height="29" Margin="399,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Salary:" HorizontalAlignment="Left" Height="37" Margin="411,168,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="accountant_salary" HorizontalAlignment="Left" Height="29" Margin="518,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="LabelUpload the revised CV of the doctor" Margin="0,0,375,176" HorizontalAlignment="Right" Width="397" Height="37" VerticalAlignment="Bottom"/>
+                    <Button x:Name="accountant_update_cv" Content="Upload the CV file" HorizontalAlignment="Center" Height="45" Margin="0,331,0,0" VerticalAlignment="Top" Width="196" Background="#FF57CFE4" FontSize="20" FontWeight="Bold"/>
+                    <Button x:Name="accountant_submit" Content="Submit" HorizontalAlignment="Center" Margin="0,392,0,0" Width="178" Background="#FFFA583F" Foreground="White" FontSize="24" Height="65" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="staff_page" Header="Staff reception" Margin="76,-2,-105,0">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Staff's data modification" HorizontalAlignment="Left" Height="46" Margin="14,13,0,0" VerticalAlignment="Top" Width="315" Foreground="#FFFA583F" FontSize="24"/>
+                    <Label Content="Enter the National ID" HorizontalAlignment="Left" Height="33" Margin="36,65,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="staff_id" HorizontalAlignment="Left" Margin="29,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="44,135,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="staff_name1" HorizontalAlignment="Left" Height="29" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Gender :" HorizontalAlignment="Left" Margin="50,206,0,0" VerticalAlignment="Top" Height="36" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <ComboBox x:Name="staff_gender" HorizontalAlignment="Left" Margin="44,246,0,0" VerticalAlignment="Top" Width="111" Height="28" FontWeight="Bold" FontSize="18">
+                        <ComboBoxItem Content="Male"/>
+                        <ComboBoxItem Content="Female"/>
+                    </ComboBox>
+                    <Label Content="Birth Date :" HorizontalAlignment="Left" Margin="190,207,0,0" VerticalAlignment="Top" Height="33" Width="109" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="staff_birth_date" HorizontalAlignment="Left" Margin="184,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="29" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="E-mail :" HorizontalAlignment="Left" Height="35" Margin="37,291,0,0" VerticalAlignment="Top" Width="296" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="staff_E_mail" HorizontalAlignment="Left" Height="29" Margin="32,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Address :&#xA;" HorizontalAlignment="Left" Height="34" Margin="35,364,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="staff_address" HorizontalAlignment="Left" Height="49" Margin="30,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Phone number :" HorizontalAlignment="Left" Height="35" Margin="426,65,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="staff_phone" HorizontalAlignment="Left" Height="29" Margin="399,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Salary:" HorizontalAlignment="Left" Height="37" Margin="411,142,0,0" VerticalAlignment="Top" Width="111" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="staff_salary" HorizontalAlignment="Left" Height="29" Margin="515,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="LabelUpload the revised CV of the doctor" Margin="0,0,375,176" HorizontalAlignment="Right" Width="397" Height="37" VerticalAlignment="Bottom"/>
+                    <Button x:Name="staff_update_cv" Content="Upload the CV file" HorizontalAlignment="Center" Height="45" Margin="0,331,0,0" VerticalAlignment="Top" Width="196" Background="#FF57CFE4" FontSize="20" FontWeight="Bold"/>
+                    <Button x:Name="staff_submit" Content="Submit" HorizontalAlignment="Center" Margin="0,392,0,0" Width="178" Background="#FFFA583F" Foreground="White" FontSize="24" Height="65" VerticalAlignment="Top"/>
+                    <Button x:Name="view_staff" Content="View all&#xA; hospital &#xA; Staff" HorizontalAlignment="Left" Height="112" Margin="953,34,0,0" VerticalAlignment="Top" Width="178" Background="#FF9BBB1D" Foreground="White"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="stores_page" Header="stores" Margin="104,-2,-123,0">
+                <Grid Background="#FFE5E5E5">
+                    <TabControl x:Name="stores_tabcotrol" Margin="16,20,32,25">
+                        <TabItem x:Name="drug_store_page" Header="Drug stores">
+                            <Grid Background="#FFE5E5E5">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="pharmacy_stock_list" Margin="25,12,25,62" >
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn
+                                            Header="Number of medicin "/>
+                                        <DataGridTextColumn
+                                            Header="Medicin Name"/>
+                                        <DataGridTextColumn
+                                            Header="Quantity"/>
+                                        <DataGridTextColumn
+                                            Header="Medicin Code"/>
+                                        <DataGridTextColumn
+                                            Header="Price"/>
+                                        <DataGridTextColumn
+                                            Header="Total sales"/>
+                                        <DataGridTextColumn
+                                            Header="Sotres Total Cost "/>
+                                    </DataGrid.Columns>
+
+
+
+
+
+                                </DataGrid>
+                                <Button x:Name="print_d_s" Content="Print" HorizontalAlignment="Left" Height="42" Margin="454,347,0,0" VerticalAlignment="Top" Width="196" Background="#FF22C6EA"/>
+
+
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="tools_page" Header="Tools and hardware stores">
+                            <TabItem.Background>
+                                <LinearGradientBrush EndPoint="0,1">
+                                    <GradientStop Color="#FFF0F0F0"/>
+                                    <GradientStop Color="#FFF6F6F6" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TabItem.Background>
+                            <Grid Background="#FFE5E5E5">
+                                <DataGrid x:Name="tools_and_hardware_list" Margin="18,15,26,64" FontSize="18" >
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn
+                                            Header="Number of tool or H.W"/>
+                                        <DataGridTextColumn
+                                            Header="tool or H.W Name"/>
+                                        <DataGridTextColumn
+                                            Header="Quantity"/>
+                                        <DataGridTextColumn
+                                            Header="tool or H.W Code"/>
+                                        <DataGridTextColumn
+                                            Header="Price"/>
+                                        <DataGridTextColumn
+                                            Header="Total sales"/>
+                                        <DataGridTextColumn
+                                            Header="Stores Total Cost"/>
+
+                                    </DataGrid.Columns>
+
+
+
+                                </DataGrid>
+                                <Button x:Name="print_hw_s" Content="Print " HorizontalAlignment="Left" Height="46" Margin="422,345,0,0" VerticalAlignment="Top" Width="177" Click="Button_Click" Background="#FF22C6EA"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="add_product_page" Header="Add product">
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Product Name" HorizontalAlignment="Left" Height="41" Margin="131,21,0,0" VerticalAlignment="Top" Width="209"/>
+                                <TextBox x:Name="product_name" HorizontalAlignment="Left" Height="40" Margin="120,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+                                <Label Content="Quantity" HorizontalAlignment="Left" Height="40" Margin="136,111,0,0" VerticalAlignment="Top" Width="108"/>
+                                <TextBox x:Name="product_quantity" HorizontalAlignment="Left" Height="33" Margin="130,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
+                                <Label Content="Tool or hardware code" HorizontalAlignment="Left" Height="37" Margin="124,197,0,0" VerticalAlignment="Top" Width="235"/>
+                                <TextBox x:Name="tools_code" HorizontalAlignment="Left" Height="38" Margin="122,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+                                <Label Content="Price" HorizontalAlignment="Left" Height="37" Margin="126,283,0,0" VerticalAlignment="Top" Width="226"/>
+                                <TextBox x:Name="product_price" HorizontalAlignment="Left" Height="34" Margin="124,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
+                                <Button x:Name="submit_add_product_" Content="Submit" HorizontalAlignment="Left" Height="68" Margin="778,249,0,0" VerticalAlignment="Top" Width="175" Background="#FF4FCBC8"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="modify_product_page" Header="Modify product">
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Product Name" HorizontalAlignment="Left" Height="41" Margin="37,16,0,0" VerticalAlignment="Top" Width="209"/>
+                                <TextBox x:Name="product_name1" HorizontalAlignment="Left" Height="40" Margin="26,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+                                <Label Content="Quantity" HorizontalAlignment="Left" Height="40" Margin="54,101,0,0" VerticalAlignment="Top" Width="108"/>
+                                <TextBox x:Name="product_quantity1" HorizontalAlignment="Left" Height="33" Margin="49,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
+                                <Label Content="Tool or hardware code" HorizontalAlignment="Left" Height="37" Margin="28,175,0,0" VerticalAlignment="Top" Width="235"/>
+                                <Label Content="Price" HorizontalAlignment="Left" Height="37" Margin="39,254,0,0" VerticalAlignment="Top" Width="226"/>
+                                <TextBox x:Name="tools_code1" HorizontalAlignment="Left" Height="38" Margin="26,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+                                <TextBox x:Name="product_price1" HorizontalAlignment="Left" Height="34" Margin="29,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
+                                <Button x:Name="submit_the_modify_product" Content="Submit" HorizontalAlignment="Left" Height="68" Margin="425,143,0,0" VerticalAlignment="Top" Width="175" Background="#FF4FCBC8"/>
+                                <Button x:Name="delete_product" Content="Delete" HorizontalAlignment="Left" Height="68" Margin="744,140,0,0" VerticalAlignment="Top" Width="175" Background="#FFFA593D" Foreground="White"/>
+                            </Grid>
+                        </TabItem>
+
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="signup_page" Header="Sign up" Margin="123,-2,-142,0">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Click here to sign up employee" HorizontalAlignment="Left" Height="49" Margin="404,29,0,0" VerticalAlignment="Top" Width="378" Foreground="#FFC92E20" FontSize="25"/>
+                    <Label Content="Delete Employee " HorizontalAlignment="Left" Height="43" Margin="41,165,0,0" VerticalAlignment="Top" Width="283" Foreground="#FFC92E20" FontSize="24"/>
+                    <Label Content="Enter the National ID" HorizontalAlignment="Left" Height="33" Margin="42,228,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="employee_id" HorizontalAlignment="Left" Height="39" Margin="34,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="50,308,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+                    <TextBox x:Name="employee_name" HorizontalAlignment="Left" Height="41" Margin="31,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+                    <Label Content="Occupation :" HorizontalAlignment="Left" Height="35" Margin="455,296,0,0" VerticalAlignment="Top" Width="160" FontWeight="Bold" FontSize="20"/>
+                    <ComboBox x:Name="occupation" HorizontalAlignment="Left" Height="29" Margin="453,351,0,0" VerticalAlignment="Top" Width="162" FontSize="18" FontWeight="Bold">
+                        <ComboBoxItem Content="Doctor"/>
+                        <ComboBoxItem Content="Staff"/>
+                        <ComboBoxItem Content="Nurse"/>
+                        <ComboBoxItem Content="Pharmacist"/>
+                        <ComboBoxItem Content="Accountant"/>
+                    </ComboBox>
+                    <Button x:Name="delete_employee" Content="Delete" HorizontalAlignment="Left" Height="68" Margin="819,319,0,0" VerticalAlignment="Top" Width="175" Background="#FFFA593D" Foreground="White"/>
+                    <Button x:Name="Sign_up_new" Content="Sign up new&#xD;&#xA;Employee" HorizontalAlignment="Left" Height="74" Margin="494,94,0,0" VerticalAlignment="Top" Width="177" Background="#FF22C6EA" Click="Sign_up_new_Click"/>
+                </Grid>
+            </TabItem>
+
+
+            <TabItem x:Name="report_page" Header="Report" Margin="241,-2,-260,0">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Quick report" HorizontalAlignment="Left" Height="37" Margin="9,3,0,0" VerticalAlignment="Top" Width="200" Foreground="#FFD75838"/>
+                    <Label Content="Stores, products" HorizontalAlignment="Left" Height="38" Margin="40,40,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="all_stores_and_cost" Content="Report the &#xA;contents stores&#xA; and total cost" HorizontalAlignment="Left" Height="87" Margin="38,94,0,0" VerticalAlignment="Top" Width="169" Background="#FFD75838" Foreground="White"/>
+                    <Button x:Name="top_product" Content="Report the&#xA; highest selling&#xA; product in stores" HorizontalAlignment="Left" Height="96" Margin="34,202,0,0" VerticalAlignment="Top" Width="174" Background="#FFD75838" Foreground="White"/>
+                    <Button x:Name="lowest_product" Content="Report the&#xA; lowest selling&#xA; product in stores" HorizontalAlignment="Left" Height="102" Margin="31,316,0,0" VerticalAlignment="Top" Width="178" Background="#FFD75838" Foreground="White"/>
+                    <Label Content="Employees, departments" HorizontalAlignment="Left" Height="39" Margin="263,40,0,0" VerticalAlignment="Top" Width="257"/>
+                    <Button x:Name="top_department" Content="Report on&#xA; the highest&#xA; earning&#xA; department" HorizontalAlignment="Left" Height="121" Margin="296,86,0,0" VerticalAlignment="Top" Width="192" Background="#FF808441" Foreground="White"/>
+                    <Button x:Name="lowest_department" Content="Report on&#xA; the lowest&#xA; earning&#xA; department" HorizontalAlignment="Left" Height="121" Margin="296,222,0,0" VerticalAlignment="Top" Width="192" Background="#FF808441" Foreground="White"/>
+                    <Button x:Name="total_labor_money" Content="Total labor money" HorizontalAlignment="Left" Height="63" Margin="293,358,0,0" VerticalAlignment="Top" Width="192" Background="#FF808441" Foreground="White"/>
+                    <Label Content="Revenues" HorizontalAlignment="Left" Height="35" Margin="763,22,0,0" VerticalAlignment="Top" Width="109"/>
+                    <Button x:Name="employees_in_department" Content="A report on&#xA; the employees &#xA;of each &#xA;department&#xA; with their salaries" HorizontalAlignment="Left" Height="143" Margin="569,62,0,0" VerticalAlignment="Top" Width="216" Background="#FF442B28" Foreground="White"/>
+                    <Button x:Name="month_money" Content="Report on &#xA;the hospital's&#xA; monthly revenue" HorizontalAlignment="Left" Height="98" Margin="572,220,0,0" VerticalAlignment="Top" Width="208" Background="#FF442B28" Foreground="White"/>
+                    <Button x:Name="year_money" Content="Report on the &#xA;annual revenue&#xA; of the hospital" HorizontalAlignment="Left" Height="88" Margin="569,329,0,0" VerticalAlignment="Top" Width="209" Background="#FF442B28" Foreground="White"/>
+                    <Button x:Name="rate_monthly_year_money" Content="Report on the &#xA;hospital's&#xA; monthly and &#xA;annual rate" HorizontalAlignment="Left" Height="133" Margin="839,70,0,0" VerticalAlignment="Top" Width="182" Background="#FF442B28" Foreground="White"/>
+                    <Button x:Name="make_report" Content="Make a report" HorizontalAlignment="Left" Height="69" Margin="889,329,0,0" VerticalAlignment="Top" Width="151" Background="#FFF0A244" Foreground="Black"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Supplier_page" Header="Supplier" Margin="64,-2,-74,0">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Supplier or company name" HorizontalAlignment="Left" Height="44" Margin="35,33,0,0" VerticalAlignment="Top" Width="275"/>
+                    <TextBox x:Name="Supplier_or_company_name" HorizontalAlignment="Left" Height="44" Margin="40,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
+                    <Label Content="Product name" HorizontalAlignment="Left" Height="42" Margin="53,239,0,0" VerticalAlignment="Top" Width="252"/>
+                    <Label Content="Product type" HorizontalAlignment="Left" Height="42" Margin="53,135,0,0" VerticalAlignment="Top" Width="254"/>
+                    <TextBox x:Name="Product_type" HorizontalAlignment="Left" Height="45" Margin="44,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241"/>
+                    <TextBox x:Name="Product_name" HorizontalAlignment="Left" Height="44" Margin="44,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="242"/>
+                    <Label Content="Product price" HorizontalAlignment="Left" Height="39" Margin="53,342,0,0" VerticalAlignment="Top" Width="223"/>
+                    <TextBox x:Name="Product_price" HorizontalAlignment="Left" Height="43" Margin="53,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+                    <Label Content="Quantity" HorizontalAlignment="Left" Height="41" Margin="425,32,0,0" VerticalAlignment="Top" Width="178"/>
+                    <TextBox x:Name="Quantity" HorizontalAlignment="Left" Height="39" Margin="416,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
+                    <Label Content="company manager" HorizontalAlignment="Left" Height="44" Margin="402,131,0,0" VerticalAlignment="Top" Width="217"/>
+                    <TextBox x:Name="company_manager" HorizontalAlignment="Left" Height="39" Margin="401,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249"/>
+                    <Label Content="Phone" HorizontalAlignment="Left" Height="38" Margin="403,227,0,0" VerticalAlignment="Top" Width="254"/>
+                    <TextBox x:Name="phone_supplier" HorizontalAlignment="Left" Height="40" Margin="405,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
+                    <Label Content="Address :&#xA;" HorizontalAlignment="Left" Height="34" Margin="403,324,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+                    <TextBox x:Name="address_supplier" HorizontalAlignment="Left" Height="49" Margin="401,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="View_all_suppliers" Content="View all suppliers" HorizontalAlignment="Left" Height="67" Margin="886,104,0,0" VerticalAlignment="Top" Width="199" Background="#FFB9E023"/>
+                    <Button x:Name="Add_supplier" Content="Add supplier" HorizontalAlignment="Left" Height="71" Margin="899,223,0,0" VerticalAlignment="Top" Width="176" Background="#FFFA583D"/>
+                    <Button Content="Edit Supplier" HorizontalAlignment="Left" Height="66" Margin="906,329,0,0" VerticalAlignment="Top" Width="161" Background="#FF143FD9" Foreground="White"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

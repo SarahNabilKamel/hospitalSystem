@@ -1,0 +1,106 @@
+﻿<Window x:Class="Hospital.Nurse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital"
+        mc:Ignorable="d"
+        Title="Nurse" Height="661" Width="1256">
+    <Grid>
+        <Image Margin="0,1,1,-1" Source="/Untitled Design 5.png" Stretch="Fill"/>
+        <Label Content="Welcome " HorizontalAlignment="Left" Height="36" Margin="110,52,0,0" VerticalAlignment="Top" Width="120" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="nurse_name" HorizontalAlignment="Left" Height="32" Margin="237,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="log_out" Content="LOG OUT" Height="33" Margin="0,57,127,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="#FFC92E20" Foreground="White" HorizontalAlignment="Right" Width="137"/>
+        <TabControl x:Name="nurse_tabcontrol" Margin="106,110,105,37" FontWeight="Bold" FontSize="20">
+            <TabItem x:Name="pateint_list_page" Header="Pateint list" Margin="-2,-2,-45,0">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="patient_list" Margin="12,10,16,25" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn
+                                Header="Numer of patient "/>
+                            <DataGridTextColumn
+                                Header="Patient Name "/>
+                            <DataGridTextColumn
+                                Header=" Patient Phone"/>
+                            <DataGridTextColumn
+                                Header="Doctor Name"/>
+                            <DataGridTextColumn
+                                Header="Type of treatment"/>
+                            <DataGridTextColumn
+                                Header="Total Cost"/>
+                            <DataGridTextColumn
+                                Header="Check"/>
+                        </DataGrid.Columns>
+
+
+                    </DataGrid>
+                    <Button x:Name="print_patient_list1" Content="Print" HorizontalAlignment="Left" Margin="452,0,0,-68" Width="263" Background="#FFFF3E2E" Foreground="White" Height="42" VerticalAlignment="Bottom"/>
+                    <Button x:Name="print_patient_list1_Copy" Content="Print" HorizontalAlignment="Left" Margin="452,0,0,-68" Width="263" Background="#FFFF3E2E" Foreground="White" Height="42" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Patient_status_update_page" Header="Patient status update and modify" Margin="44,-2,-48,0">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Enter Enter the patient's national number" HorizontalAlignment="Left" Height="43" Margin="22,18,0,0" VerticalAlignment="Top" Width="428"/>
+                    <TextBox x:Name="patient_national_id2" HorizontalAlignment="Left" Height="38" Margin="34,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
+                    <Label Content="Patient name" HorizontalAlignment="Left" Height="36" Margin="48,112,0,0" VerticalAlignment="Top" Width="184"/>
+                    <TextBox x:Name="patient_name1" HorizontalAlignment="Left" Height="33" Margin="41,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303"/>
+                    <Label Content="What do you want to edit ?" HorizontalAlignment="Left" Height="43" Margin="573,21,0,0" VerticalAlignment="Top" Width="286"/>
+                    <ComboBox x:Name="select_modify" HorizontalAlignment="Left" Height="39" Margin="570,60,0,0" VerticalAlignment="Top" Width="293">
+                        <ComboBoxItem Content="Name"/>
+                        <ComboBoxItem Content="Gender"/>
+                        <ComboBoxItem Content="Birthday"/>
+                        <ComboBoxItem Content="Address"/>
+                        <ComboBoxItem Content="Phone Number"/>
+                        <ComboBoxItem Content="The doctor"/>
+                        <ComboBoxItem Content="Type of treatment"/>
+                        <ComboBoxItem Content="Add any test or rays"/>
+                        <ComboBoxItem Content="Total cost test and rays"/>
+                        <ComboBoxItem Content="Total cost detect or diagnose"/>
+                        <ComboBoxItem Content="Accommodation and surgery costs"/>
+                        <ComboBoxItem Content="Room Number"/>
+                        <ComboBoxItem Content="Room Department"/>
+                        <ComboBoxItem Content="Entry time"/>
+                        <ComboBoxItem Content="Date of Entry"/>
+                        <ComboBoxItem Content="Exit time"/>
+                        <ComboBoxItem Content="Exit date"/>
+                    </ComboBox>
+                    <Label Content="Enter the new Value " HorizontalAlignment="Left" Height="45" Margin="576,109,0,0" VerticalAlignment="Top" Width="289"/>
+                    <TextBox x:Name="New_value" HorizontalAlignment="Left" Height="45" Margin="572,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295"/>
+                    <Label Content="Nurse :&#xA;" HorizontalAlignment="Left" Height="36" Margin="69,212,0,0" VerticalAlignment="Top" Width="103"/>
+                    <TextBox x:Name="username_nurse" HorizontalAlignment="Left" Height="33" Margin="170,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187"/>
+                    <Button x:Name="submit" Content="submit edit" HorizontalAlignment="Left" Height="52" Margin="619,209,0,0" VerticalAlignment="Top" Width="190" BorderBrush="#FF707070" Background="#FFFEC064"/>
+                    <Label Content="Add additional data" HorizontalAlignment="Left" Height="36" Margin="55,263,0,0" VerticalAlignment="Top" Width="268"/>
+                    <ComboBox x:Name="additional_patient_data" HorizontalAlignment="Left" Height="39" Margin="38,310,0,0" VerticalAlignment="Top" Width="293">
+                        <ComboBoxItem Content="Address"/>
+                        <ComboBoxItem Content="Phone Number"/>
+                        <ComboBoxItem Content="Type of treatment"/>
+                        <ComboBoxItem Content="Add any test or rays"/>
+                        <ComboBoxItem Content="Entry time"/>
+                        <ComboBoxItem Content="Date of Entry"/>
+                        <ComboBoxItem Content="Exit time"/>
+                        <ComboBoxItem Content="Exit date"/>
+                    </ComboBox>
+                    <Label Content="Enter the Value " HorizontalAlignment="Left" Height="45" Margin="42,348,0,0" VerticalAlignment="Top" Width="289"/>
+                    <TextBox x:Name="value_of_additional_data_patient" HorizontalAlignment="Left" Height="45" Margin="37,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295"/>
+                    <Button x:Name="upload_pateint_files" Content="Upload any new,&#xA; additional, or &#xA;modified&#xA; patient files" HorizontalAlignment="Left" Height="120" Margin="378,322,0,0" VerticalAlignment="Top" Width="181" HorizontalContentAlignment="Center" BorderBrush="Black" Background="#FF14325A" Foreground="White"/>
+                    <Button x:Name="submit_Copy" Content="submit add" HorizontalAlignment="Left" Height="52" Margin="675,363,0,0" VerticalAlignment="Top" Width="190" BorderBrush="#FF707070" Background="#FF04DFCE"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="print_page" Header="Print" Margin="48,-3,-151,1" BorderBrush="#FF555454">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Enter Enter the patient's national number" HorizontalAlignment="Left" Height="43" Margin="22,18,0,0" VerticalAlignment="Top" Width="428"/>
+                    <TextBox x:Name="patient_national_id2_Copy" HorizontalAlignment="Left" Height="38" Margin="34,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
+                    <Label Content="Patient name" HorizontalAlignment="Left" Height="36" Margin="48,112,0,0" VerticalAlignment="Top" Width="184"/>
+                    <TextBox x:Name="patient_name2" HorizontalAlignment="Left" Height="33" Margin="41,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303"/>
+                    <Label Content="Print patient list" HorizontalAlignment="Left" Height="39" Margin="601,264,0,0" VerticalAlignment="Top" Width="272"/>
+                    <Button x:Name="print_patient_list" Content="Print" HorizontalAlignment="Left" Height="68" Margin="616,322,0,0" VerticalAlignment="Top" Width="221" Background="#FFFEC064"/>
+                    <Button x:Name="Print_the_patient_file" Content="Print" HorizontalAlignment="Left" Height="68" Margin="71,329,0,0" VerticalAlignment="Top" Width="221" Background="#FF70CEE7"/>
+                    <Label Content="Print the patient file" HorizontalAlignment="Left" Height="42" Margin="54,272,0,0" VerticalAlignment="Top" Width="431"/>
+                </Grid>
+            </TabItem>
+
+
+        </TabControl>
+
+    </Grid>
+</Window>

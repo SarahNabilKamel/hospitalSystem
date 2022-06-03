@@ -1,0 +1,33 @@
+C:\Users\Kamel\OneDrive\Documents\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\Kamel\OneDrive\Documents\Hospital\bin\Debug\Hospital.exe
+C:\Users\Kamel\OneDrive\Documents\Hospital\bin\Debug\Hospital.pdb
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.csproj.AssemblyReference.cache
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\MainWindow.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\App.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital_MarkupCompile.cache
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital_MarkupCompile.lref
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\MainWindow.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.g.resources
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.exe
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.pdb
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\sign up.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\sign up.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Doctor.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Doctor.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Accountant.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Accountant.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Nurse.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Nurse.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Staff reception.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Staff reception.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Pharmacist.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Pharmacist.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Manager.g.cs
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Manager.baml
+C:\Users\Kamel\OneDrive\Documents\Hospital\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Kamel\OneDrive\Documents\Hospital\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Kamel\OneDrive\Documents\Hospital\obj\Debug\Hospital.csproj.CopyComplete

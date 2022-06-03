@@ -1,0 +1,48 @@
+﻿<Window x:Class="Hospital.sign_up"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital"
+        mc:Ignorable="d"
+        Title="sign_up" Height="610" Width="989">
+    <Grid>
+        <Image Margin="0,2,1,2" Source="/Untitled Design.png" Stretch="Fill"/>
+        <Label Content="Sign up" Height="46" Margin="195,19,225,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.54" HorizontalContentAlignment="Center" FontSize="25" FontWeight="Bold"/>
+        <Label Content="Name :" HorizontalAlignment="Left" Height="33" Margin="65,72,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Height="29" Margin="62,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="17"/>
+        <ComboBox x:Name="Gender" HorizontalAlignment="Left" Margin="67,197,0,0" VerticalAlignment="Top" Width="111" Height="28" FontWeight="Bold" FontSize="18">
+            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem Content="Female"/>
+        </ComboBox>
+        <Label Content="Birth Date :" HorizontalAlignment="Left" Margin="239,163,0,0" VerticalAlignment="Top" Height="33" Width="109" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="birth_date" HorizontalAlignment="Left" Margin="223,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="29" FontSize="18" FontWeight="Bold"/>
+        <Label Content="E-mail :" HorizontalAlignment="Left" Height="35" Margin="79,239,0,0" VerticalAlignment="Top" Width="296" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="E_mail" HorizontalAlignment="Left" Height="29" Margin="73,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Address :&#xA;" HorizontalAlignment="Left" Height="34" Margin="79,319,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="address" HorizontalAlignment="Left" Height="49" Margin="76,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Nationality :&#xA;Nationality" HorizontalAlignment="Left" Height="37" Margin="80,414,0,0" VerticalAlignment="Top" Width="181" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="nationality" HorizontalAlignment="Left" Height="29" Margin="75,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Occupation :" HorizontalAlignment="Left" Height="35" Margin="572,100,0,0" VerticalAlignment="Top" Width="160" FontWeight="Bold" FontSize="20"/>
+        <ComboBox x:Name="occupation" HorizontalAlignment="Left" Height="29" Margin="569,137,0,0" VerticalAlignment="Top" Width="162" FontSize="18" FontWeight="Bold">
+            <ComboBoxItem Content="Doctor"/>
+            <ComboBoxItem Content="Staff"/>
+            <ComboBoxItem Content="Nurse"/>
+            <ComboBoxItem Content="Pharmacist"/>
+            <ComboBoxItem Content="Accountant"/>
+        </ComboBox>
+        <Label Content="Salary:" HorizontalAlignment="Left" Height="37" Margin="764,98,0,0" VerticalAlignment="Top" Width="111" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="salary" HorizontalAlignment="Left" Height="29" Margin="761,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontWeight="Bold"/>
+        <Label Content="National ID" HorizontalAlignment="Left" Height="33" Margin="574,184,0,0" VerticalAlignment="Top" Width="303" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="National_ID" HorizontalAlignment="Left" Margin="566,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Height="29" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Phone number :" HorizontalAlignment="Left" Height="35" Margin="574,256,0,0" VerticalAlignment="Top" Width="295" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="phone" HorizontalAlignment="Left" Height="29" Margin="565,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Specialization :" HorizontalAlignment="Left" Height="36" Margin="569,324,0,0" VerticalAlignment="Top" Width="287" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="specialization" HorizontalAlignment="Left" Height="29" Margin="564,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="submit" Content="Submit" HorizontalAlignment="Right" Height="41" Margin="0,0,309,45" VerticalAlignment="Bottom" Width="107" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.518,2.315" Click="submit_Click"/>
+        <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Right" Height="40" Margin="0,0,146,44" VerticalAlignment="Bottom" Width="106" Foreground="White" Background="#FFEF5638" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="upload_the_cv_file" Content="Upload the CV file" HorizontalAlignment="Right" Height="45" Margin="0,0,194,112" VerticalAlignment="Bottom" Width="196" Background="#FF57CFE4" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="Gender_in_sign" Content="Gender" HorizontalAlignment="Left" Margin="83,161,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+
+    </Grid>
+</Window>
